@@ -24,6 +24,7 @@
   },
   "main": "lib/index.js",
   "scripts": {
+    "postinstall": "coffee --bare --compile --output lib/ src/*.coffee",
     "build": "coffee --bare --compile --output lib/ src/*.coffee",
     "prepublish": "coffee --bare --compile --output lib/ src/*.coffee",
     "postpublish": "rm -rf lib",
