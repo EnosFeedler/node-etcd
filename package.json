@@ -25,9 +25,6 @@
   "main": "lib/index.js",
   "scripts": {
     "postinstall": "./node_modules/.bin/coffee --bare --compile --output ./lib ./src/*.coffee",
-    "build": "./node_modules/.bin/coffee --bare --compile --output lib/ src/*.coffee",
-    "prepublish": "./node_modules/.bin/coffee --bare --compile --output ./lib ./src/*.coffee",
-    "postpublish": "rm -rf lib",
     "test": "node_modules/mocha/bin/mocha --compilers coffee:coffee-script"
   },
   "dependencies": {
