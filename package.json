@@ -24,9 +24,9 @@
   },
   "main": "lib/index.js",
   "scripts": {
-    "postinstall": "coffee --bare --compile --output lib/ src/*.coffee",
-    "build": "coffee --bare --compile --output lib/ src/*.coffee",
-    "prepublish": "coffee --bare --compile --output lib/ src/*.coffee",
+    "postinstall": "./node_modules/.bin/coffee --bare --compile --output ./lib ./src/*.coffee",
+    "build": "./node_modules/.bin/coffee --bare --compile --output lib/ src/*.coffee",
+    "prepublish": "./node_modules/.bin/coffee --bare --compile --output ./lib ./src/*.coffee",
     "postpublish": "rm -rf lib",
     "test": "node_modules/mocha/bin/mocha --compilers coffee:coffee-script"
   },
