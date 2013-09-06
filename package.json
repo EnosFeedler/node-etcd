@@ -32,9 +32,7 @@
   },
   "dependencies": {
     "underscore": "*",
-    "request": "*"
-  },
-  "devDependencies": {
+    "request": "*",
     "coffee-script": "*",
     "mocha": "*",
     "should": "*",
