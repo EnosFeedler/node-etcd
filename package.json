@@ -24,6 +24,7 @@
   },
   "main": "lib/index.js",
   "scripts": {
+    "postinstall": "coffee --bare --compile --output ./lib ./src/*.coffee",
     "test": "node_modules/mocha/bin/mocha --compilers coffee:coffee-script"
   },
   "dependencies": {
