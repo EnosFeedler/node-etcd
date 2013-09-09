@@ -39,7 +39,12 @@ class Etcd
 		if extraopts?
 			_.extend opt.form, extraopts
 
-		request.post opt, @_responseHandler callback
+		request.post opt, (err, resp, body) =>
+			if not err and resp.statusCode is 307
+				opt.url = resp.headers.location
+				request.post opt, @_responseHandler callback
+			else
+				@_responseHandler callback
 
 	# Delete given key
 	del: (key, callback) ->
