@@ -44,7 +44,7 @@ class Etcd
 				opt.url = resp.headers.location
 				request.post opt, @_responseHandler callback
 			else
-				@_responseHandler callback
+				(@_responseHandler(callback)) err, resp, body
 
 	# Delete given key
 	del: (key, callback) ->
